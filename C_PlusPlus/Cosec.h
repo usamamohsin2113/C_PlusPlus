@@ -4,7 +4,7 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
-void main()
+void main4()
 {
 	int angle, pow, fact, count = 0;
 	double sum = 1.0;
