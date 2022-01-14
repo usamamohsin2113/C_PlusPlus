@@ -142,11 +142,13 @@
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="C_PlusPlus.cpp" />
     <ClCompile Include="GPA_CGPA.cpp" />
+    <ClCompile Include="LinkedListConcatinate.cpp" />
     <ClCompile Include="Sort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
     <ClInclude Include="GPA_CGPA.h" />
+    <ClInclude Include="LinkedListConcatinate.h" />
     <ClInclude Include="Sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

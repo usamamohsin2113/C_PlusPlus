@@ -98,7 +98,7 @@ public:
 	}
 };
 
-void main()
+void main2()
 {
 	using std::cout;
 	complex ob1, ob2, ob3;
