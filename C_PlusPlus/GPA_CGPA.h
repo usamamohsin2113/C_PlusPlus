@@ -14,7 +14,7 @@ char name[10];
 bool val;
 bool end();
 
-void main()
+void main1()
 {
 	char m, rep;
 	bool def;

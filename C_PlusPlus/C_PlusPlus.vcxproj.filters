@@ -24,12 +24,18 @@
     <ClCompile Include="GPA_CGPA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Complex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GPA_CGPA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Complex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
