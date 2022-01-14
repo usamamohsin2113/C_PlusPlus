@@ -144,6 +144,7 @@
     <ClCompile Include="GPA_CGPA.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkList_Delete.cpp" />
+    <ClCompile Include="LinkList_Queue.cpp" />
     <ClCompile Include="Sort.cpp" />
     <ClCompile Include="UMath.cpp" />
   </ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="GPA_CGPA.h" />
     <ClInclude Include="LinkedList_Concatenate.h" />
     <ClInclude Include="LinkList_Delete.h" />
+    <ClInclude Include="LinkList_Queue.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="UMath.h" />
