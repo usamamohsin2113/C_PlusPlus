@@ -14,7 +14,7 @@ char name[10];
 bool val;
 bool end();
 
-void main1()
+void GPA_CGPA_Usage()
 {
 	char m, rep;
 	bool def;

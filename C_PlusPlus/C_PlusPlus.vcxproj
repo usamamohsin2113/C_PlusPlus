@@ -139,21 +139,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\C++ Projects\dec_int_double\dec_int_double.cpp" />
     <ClCompile Include="Complex.cpp" />
-    <ClCompile Include="Cosec.cpp" />
     <ClCompile Include="C_PlusPlus.cpp" />
     <ClCompile Include="GPA_CGPA.cpp" />
-    <ClCompile Include="LinkedListConcatinate.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkList_Delete.cpp" />
     <ClCompile Include="Sort.cpp" />
+    <ClCompile Include="UMath.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
-    <ClInclude Include="Cosec.h" />
     <ClInclude Include="GPA_CGPA.h" />
-    <ClInclude Include="LinkedListConcatinate.h" />
+    <ClInclude Include="LinkedList_Concatenate.h" />
+    <ClInclude Include="LinkList_Delete.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sort.h" />
+    <ClInclude Include="UMath.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="C_PlusPlus.rc" />

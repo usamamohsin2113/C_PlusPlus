@@ -57,10 +57,8 @@ void concatinate(node* head11, node* head22)
 	}
 }
 
-void main3()
+void ConcatinationUsage()
 {
-
-
 	char check;
 	int val;
 	do

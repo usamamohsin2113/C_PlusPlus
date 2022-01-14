@@ -1,13 +1,13 @@
-// Use of complex numbers with some errors in formulaes
+// Use of Complex numbers with some errors in formulaes
 
 #include <iostream>
 
-class complex
+class Complex
 {
 	int real, comp;
 public:
-	complex() :real(0), comp(0) {}
-	complex(int r, int c) :real(c), comp(c) {}
+	Complex() :real(0), comp(0) {}
+	Complex(int r, int c) :real(c), comp(c) {}
 
 	void set()
 	{
@@ -16,7 +16,7 @@ public:
 
 		cout << "\nEnter real part : ";
 		cin >> real;
-		cout << "\nEnter complex part : ";
+		cout << "\nEnter Complex part : ";
 		cin >> comp;
 	}
 
@@ -30,34 +30,34 @@ public:
 			cout << real << " - " << -(comp) << " i";
 	}
 
-	complex operator +(complex data)
+	Complex operator +(Complex data)
 	{
-		complex temp;
+		Complex temp;
 		temp.real = real + data.real;
 		temp.comp = comp + data.comp;
 
 		return temp;
 	}
 
-	complex operator -(complex data)
+	Complex operator -(Complex data)
 	{
-		complex temp;
+		Complex temp;
 		temp.real = real - data.real;
 		temp.comp = comp - data.comp;
 
 		return temp;
 	}
 
-	complex operator *(complex data)
+	Complex operator *(Complex data)
 	{
-		complex temp;
+		Complex temp;
 		temp.real = real * data.real - comp * data.comp;
 		temp.comp = real * data.comp + data.comp * real;
 
 		return temp;
 	}
 
-	bool operator >(complex data)
+	bool operator >(Complex data)
 	{
 		if (real > data.real)
 			return true;
@@ -65,7 +65,7 @@ public:
 			false;
 	}
 
-	bool operator <(complex data)
+	bool operator <(Complex data)
 	{
 		if (real < data.real)
 			return true;
@@ -73,7 +73,7 @@ public:
 			false;
 	}
 
-	bool operator >=(complex data)
+	bool operator >=(Complex data)
 	{
 		if (real >= data.real)
 			return true;
@@ -81,7 +81,7 @@ public:
 			false;
 	}
 
-	bool operator <=(complex data)
+	bool operator <=(Complex data)
 	{
 		if (real <= data.real)
 			return true;
@@ -89,7 +89,7 @@ public:
 			false;
 	}
 
-	bool operator ==(complex data)
+	bool operator ==(Complex data)
 	{
 		if (real == data.real)
 			return true;
@@ -98,10 +98,10 @@ public:
 	}
 };
 
-void main2()
+void ComplexUsage()
 {
 	using std::cout;
-	complex ob1, ob2, ob3;
+	Complex ob1, ob2, ob3;
 
 	ob1.set();
 	ob2.set();
