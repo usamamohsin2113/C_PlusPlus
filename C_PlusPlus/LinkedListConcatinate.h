@@ -57,7 +57,7 @@ void concatinate(node* head11, node* head22)
 	}
 }
 
-void main()
+void main3()
 {
 
 

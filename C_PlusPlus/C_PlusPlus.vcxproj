@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Complex.cpp" />
+    <ClCompile Include="Cosec.cpp" />
     <ClCompile Include="C_PlusPlus.cpp" />
     <ClCompile Include="GPA_CGPA.cpp" />
     <ClCompile Include="LinkedListConcatinate.cpp" />
@@ -147,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
+    <ClInclude Include="Cosec.h" />
     <ClInclude Include="GPA_CGPA.h" />
     <ClInclude Include="LinkedListConcatinate.h" />
     <ClInclude Include="Sort.h" />
