@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C_PlusPlus.cpp" />
+    <ClCompile Include="LinkList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="GameTries.h" />
     <ClInclude Include="GPA_CGPA.h" />
     <ClInclude Include="LinkedList_Concatenate.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkList_Delete.h" />
     <ClInclude Include="LinkList_Operations.h" />
     <ClInclude Include="LinkList_Queue.h" />

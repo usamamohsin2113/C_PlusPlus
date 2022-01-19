@@ -3,39 +3,58 @@ using namespace std;
 
 namespace LinkList_Operations
 {
-
-
-	struct list
+	/*struct node
 	{
 		int info;
-		list* left, * right;
+		node* left, * right;
+	};*/
+
+	struct ListNode
+	{
+		int value;
+		ListNode* listNode;
 	};
 
-	list* head = NULL;
+	ListNode* head = NULL;
 
-	void insert()
+	void Insert()
 	{
-		char choice;
-		cout << "\n\n Do you want to enter a value ? ";
-		cin >> choice;
+		ListNode* node = new ListNode;
 
-		while (choice == 'Y' || choice == 'y')
+		cout << "\n\n Enter value : ";
+		cin >> node->value;
+
+		if (head == NULL)
 		{
-			list* obj = new list;
-			cout << "\n\n Enter value : ";
-			cin >> obj->info;
-			if (head == NULL)
-				obj->right = NULL;
+			node->listNode = NULL;
+		}
+		else
+		{
+			obj->right = head;
+			head->left = obj;
+		}
 
-			else
-			{
-				obj->right = head;
-				head->left = obj;
-			}
-			head = obj;
-			obj->left = NULL;
-			cout << "\n\n Do you want to enter another value ? ";
-			cin >> choice;
+		head = obj;
+		obj->left = NULL;
+
+
+	}
+
+	void InsertNodes()
+	{
+		int count;
+
+		cout << "\n\nHow many values you want to enter?";
+		cin >> count;
+
+		for (int i = 0; i < count; i++)
+		{
+			int value;
+			
+			cout << "\nEnter value: ";
+			cin >> value;
+
+			Insert()
 		}
 	}
 
@@ -271,10 +290,54 @@ namespace LinkList_Operations
 			while (temp != NULL)
 			{
 				count++;
-				temp = temp->link;
+				temp = temp->list;
 			}
 
 			cout << "\n\n No of nodes are = " << count;
+		}
+	}
+
+	void removebefore(int val)
+	{
+		if (head == NULL)
+		{
+			cout << "\n List is empty";
+			return; //So that execution doesnot continues to search()
+		}
+
+
+
+		else if (head->link == NULL) //If there is only one node
+		{
+			cout << "\n Deletion is not possible";
+			return; //So that execution doesnot continues to search()
+		}
+
+		node* temp = search(val);
+
+		else if (temp == -1 || temp == head)//If the found value is first one
+			cout << "\n Deletion is not possible";
+
+		else if (temp == head->link)
+		{
+			temp = head;
+			head = head->link;
+			cout << "\n Deleted value is " << temp->info;
+			delete temp;
+		}
+
+		else
+		{
+			node* temp1, * temp2 = head;
+			while (temp2->link != temp)
+			{
+				temp1 = temp2;
+				temp2 = temp2->link;
+			}
+
+			temp1->link = temp;
+			cout << "\n Deleted value is " << temp2->info;
+			delete temp2;
 		}
 	}
 
