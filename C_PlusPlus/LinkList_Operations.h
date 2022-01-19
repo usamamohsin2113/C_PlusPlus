@@ -250,6 +250,34 @@ namespace LinkList_Operations
 		}
 	}
 
+	void countnodes()
+	{
+		if (head == NULL)
+		{
+			cout << "\n\n No of Nodes are = 0";
+			return;
+		}
+
+		else if (head->info == NULL)
+		{
+			cout << "\n\n No of nodes are = 1";
+			return;
+		}
+
+		else
+		{
+			int count = 0;
+			list* temp = head;
+			while (temp != NULL)
+			{
+				count++;
+				temp = temp->link;
+			}
+
+			cout << "\n\n No of nodes are = " << count;
+		}
+	}
+
 	void LinkList_Operations_Usage()
 	{
 		insert();

@@ -139,23 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Complex.cpp" />
     <ClCompile Include="C_PlusPlus.cpp" />
-    <ClCompile Include="GPA_CGPA.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="LinkList_Delete.cpp" />
-    <ClCompile Include="LinkList_Operations.cpp" />
-    <ClCompile Include="LinkList_Queue.cpp" />
-    <ClCompile Include="Sort.cpp" />
-    <ClCompile Include="UMath.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
+    <ClInclude Include="DecimalToBinary.h" />
+    <ClInclude Include="GameTries.h" />
     <ClInclude Include="GPA_CGPA.h" />
     <ClInclude Include="LinkedList_Concatenate.h" />
     <ClInclude Include="LinkList_Delete.h" />
     <ClInclude Include="LinkList_Operations.h" />
     <ClInclude Include="LinkList_Queue.h" />
+    <ClInclude Include="DrawShapes.h" />
+    <ClInclude Include="LinkList_Search.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="UMath.h" />
