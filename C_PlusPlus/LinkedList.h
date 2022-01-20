@@ -1,115 +1,140 @@
-#pragma once
 #include <cstddef>
 #include <iostream>
+
 using namespace std;
-class Node
+namespace DataStructure
 {
-public:
-	int value;
-	Node* next;
-
-	Node()
+	class Node
 	{
-		value = 0;
-		next = NULL;
-	}
+	public:
+		int value;
+		Node* next;
 
-	Node(int value)
-	{
-		this->value = value;
-		next = NULL;
-	}
-};
-
-class LinkedList
-{
-public:
-	Node* head;
-
-	LinkedList()
-	{
-		head = NULL;
-	}
-
-	void Insert(int value)
-	{
-		Node* node = new Node(value);
-
-		if (head->next == NULL)
+		Node()
 		{
-			head->next = node;
-			return;
+			value = 0;
+			next = NULL;
 		}
 
-		Node* temp = head;
-
-		while (temp->next != NULL)
+		Node(int value)
 		{
-			temp = temp->next;
+			this->value = value;
+			next = NULL;
+		}
+	};
+
+	class LinkedList
+	{
+	public:
+		Node* head;
+
+		LinkedList()
+		{
+			head = NULL;
 		}
 
-		temp->next = node;
-	}
-
-	Node* Search(int value)
-	{
-		if (head == NULL)
+		void Insert(int value)
 		{
+			Node* node = new Node(value);
+
+			if (head->next == NULL)
+			{
+				head->next = node;
+				return;
+			}
+
+			Node* temp = head;
+
+			while (temp->next != NULL)
+			{
+				temp = temp->next;
+			}
+
+			temp->next = node;
+		}
+
+		Node* Search(int value)
+		{
+			if (head == NULL)
+			{
+				return NULL;
+			}
+
+			Node* temp = head;
+
+			while (temp != NULL)
+			{
+				if (temp->value == value)
+				{
+					return temp;
+				}
+
+				temp = temp->next;
+			}
+
 			return NULL;
 		}
 
-		Node* temp = head;
-
-		while (temp != NULL)
+		void ReplaceFirstValue(int currentValue, int newValue)
 		{
-			if (temp->value == value)
+			if (head == NULL)
 			{
-				return temp;
-			}
-
-			temp = temp->next;
-		}
-
-		return NULL;
-	}
-
-	void ReplaceFirstValue(int currentValue, int newValue)
-	{
-		if (head == NULL)
-		{
-			cout << "List is empty";
-			return;
-		}
-
-		Node* temp = head;
-
-		while (temp != NULL)
-		{
-			if (temp->value == currentValue)
-			{
-				temp->value = newValue;
+				cout << "List is empty";
 				return;
 			}
+
+			Node* temp = head;
+
+			while (temp != NULL)
+			{
+				if (temp->value == currentValue)
+				{
+					temp->value = newValue;
+					return;
+				}
+			}
+
+			cout << currentValue + " => value not found in list";
 		}
 
-		cout << currentValue + " => value not found in list";
-	}
-
-	void Show()
-	{
-		if (head == NULL)
+		void Concatinate(Node* head)
 		{
-			cout << "List is empty";
-			return;
+			if (this->head == NULL)
+			{
+				this->head = head;
+			}
+			else if (this->head->next == NULL)
+			{
+				this->head->next = head;
+			}
+			else
+			{
+				Node* temp = this->head;
+
+				while (temp->next != NULL)
+				{
+					temp = temp->next;
+				}
+
+				temp->next = head;
+			}
 		}
 
-		Node* temp = head;
-
-		while (temp != NULL)
+		void Show()
 		{
-			cout << temp->value + "\n";
-			temp = temp->next;
-		}
-	}
-};
+			if (head == NULL)
+			{
+				cout << "List is empty";
+				return;
+			}
 
+			Node* temp = head;
+
+			while (temp != NULL)
+			{
+				cout << temp->value + "\n";
+				temp = temp->next;
+			}
+		}
+	};
+}

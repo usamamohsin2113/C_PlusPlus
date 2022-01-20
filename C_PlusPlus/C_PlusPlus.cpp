@@ -1,9 +1,15 @@
 #include <iostream>
 #include "Sort.h"
+#include "LinkedList.h"
+#include "LinkedListOP.h"
+
+using namespace DataStructure;
 
 int main()
 {
-	const int size = 10;
+	LinkedListOP::ConcatinateLinkedList();
+
+	/*const int size = 10;
 
 	int arr[size];
 	std::cout << "\n\n Enter 10 values : ";
@@ -20,5 +26,7 @@ int main()
 	for (int i = 0; i < size; i++)
 	{
 		std::cout << "\n\t" << arr[i];
-	}
+	}*/
 }
+
+
