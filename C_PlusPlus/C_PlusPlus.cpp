@@ -7,7 +7,7 @@ using namespace DataStructure;
 
 int main()
 {
-	LinkedListOP::ConcatinateLinkedList();
+	//LinkedListOP::ConcatinateLinkedList();
 
 	/*const int size = 10;
 

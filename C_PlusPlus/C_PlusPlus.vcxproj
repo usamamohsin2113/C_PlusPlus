@@ -148,7 +148,6 @@
     <ClInclude Include="GPA_CGPA.h" />
     <ClInclude Include="LinkedListOP.h" />
     <ClInclude Include="LinkedList.h" />
-    <ClInclude Include="LinkList_Delete.h" />
     <ClInclude Include="LinkList_Operations.h" />
     <ClInclude Include="LinkList_Queue.h" />
     <ClInclude Include="DrawShapes.h" />

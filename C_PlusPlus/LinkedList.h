@@ -53,6 +53,26 @@ namespace DataStructure
 			temp->next = node;
 		}
 
+		void DeleteList()
+		{
+			if (head == NULL)
+			{
+				return;
+			}
+			else if (head->next == NULL)
+			{
+				delete head;
+				return;
+			}
+
+			while (head != NULL)
+			{
+				Node* temp = head;
+				head = head->next;
+				delete temp;
+			}
+		}
+
 		Node* Search(int value)
 		{
 			if (head == NULL)

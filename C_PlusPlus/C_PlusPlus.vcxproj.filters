@@ -38,9 +38,6 @@
     <ClInclude Include="UMath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinkList_Delete.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LinkList_Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
