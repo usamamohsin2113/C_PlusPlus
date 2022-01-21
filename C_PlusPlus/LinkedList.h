@@ -53,6 +53,41 @@ namespace DataStructure
 			temp->next = node;
 		}
 
+		void InsertAtPosition(int position, int value)
+		{
+			if (head == NULL)
+			{
+				cout << "Invalid position";
+				return;
+			}
+
+			if (position == 0)
+			{
+				Node* node = new Node(value);
+				node->next = head;
+				head = node;
+
+				return;
+			}
+
+			Node* temp = head;
+
+			while (position--)
+			{
+				if (position == 0)
+				{
+					Node* newNode = new Node(value);
+					newNode->next = temp->next;
+					temp->next = newNode;
+					return;
+				}
+
+				temp = temp->next;
+			}
+
+			cout << "Invalid position";
+		}
+
 		void DeleteList()
 		{
 			if (head == NULL)
