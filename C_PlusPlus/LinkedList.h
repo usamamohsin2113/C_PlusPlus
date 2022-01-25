@@ -33,6 +33,10 @@ namespace DataStructure
 			head = NULL;
 		}
 
+		
+		/// <summary>
+		/// Insert node at the end of list
+		/// </summary>
 		void Insert(int value)
 		{
 			Node* node = new Node(value);
@@ -53,6 +57,10 @@ namespace DataStructure
 			temp->next = node;
 		}
 
+		/// <summary>
+		/// Insert Node at the specified position and node at that position is moved forward.
+		/// Invalid Position: If position is less than 0 or Head is null
+		/// </summary>
 		void InsertAtPosition(int position, int value)
 		{
 			if (head == NULL)
@@ -86,6 +94,35 @@ namespace DataStructure
 			}
 
 			cout << "Invalid position";
+		}
+
+		/// <summary>
+		/// Insert Node after the specified position. 
+		/// If position is not found in list then node is inserted at the end of list.
+		/// </summary>
+		void InsertAfterPosition(int position, int value)
+		{
+			if (head == NULL)
+			{
+				cout << "Invalid position";
+				return;
+			}
+
+			Node* temp = head;
+
+			for (int i = 0; i <= position; i++)
+			{
+				if (temp->next == NULL)
+				{
+					break;
+				}
+
+				temp = temp->next;
+			}
+
+			Node* newNode = new Node(value);
+			newNode->next = temp->next;
+			temp->next = newNode;
 		}
 
 		void DeleteList()
