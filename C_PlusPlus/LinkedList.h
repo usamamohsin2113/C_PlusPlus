@@ -33,7 +33,7 @@ namespace DataStructure
 			head = NULL;
 		}
 
-		
+
 		/// <summary>
 		/// Insert node at the end of list
 		/// </summary>
@@ -80,7 +80,7 @@ namespace DataStructure
 
 			Node* temp = head;
 
-			while (position--)
+			while (position-- && temp != NULL)
 			{
 				if (position == 0)
 				{
@@ -142,6 +142,65 @@ namespace DataStructure
 				Node* temp = head;
 				head = head->next;
 				delete temp;
+			}
+		}
+
+		// Method is pending
+		void DeleteAtPosition(int position)
+		{
+			if (head == NULL)
+			{
+				cout << "Invalid position";
+				return;
+			}
+
+			if (position == 0)
+			{
+				Node* temp = head;
+				head = head->next;
+				delete temp;
+
+				return;
+			}
+
+			Node* temp = head;
+
+			while (position-- && temp != NULL)
+			{
+				if (position == 0)
+				{
+					Node* node = temp;
+
+
+					return;
+				}
+
+				temp = temp->next;
+			}
+		}
+
+		void DeleteNodesWithValue(int value)
+		{
+			if (head == NULL)
+			{
+				cout << "List is empty";
+				return;
+			}
+
+			Node* temp = head;
+
+			while (temp != NULL)
+			{
+				if (temp->value == value)
+				{
+					Node* node = temp;
+					temp = temp->next;
+					delete node;
+				}
+				else
+				{
+					temp = temp->next;
+				}
 			}
 		}
 
@@ -212,6 +271,11 @@ namespace DataStructure
 			}
 		}
 
+		int CountNodes()
+		{
+
+		}
+
 		void Show()
 		{
 			if (head == NULL)
@@ -226,6 +290,15 @@ namespace DataStructure
 			{
 				cout << temp->value + "\n";
 				temp = temp->next;
+			}
+		}
+
+		void ShowReverse()
+		{
+			if (head == NULL)
+			{
+				cout << "List is empty";
+				return;
 			}
 		}
 	};
