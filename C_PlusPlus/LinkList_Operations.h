@@ -17,7 +17,7 @@ namespace LinkList_Operations
 
 	ListNode* head = NULL;
 
-
+	
 	void showreverse()
 	{
 		if (head == NULL)
@@ -45,34 +45,6 @@ namespace LinkList_Operations
 				cout << "\n Value is : " << temp->info;
 				temp = temp->left;
 			}
-		}
-	}
-
-	void countnodes()
-	{
-		if (head == NULL)
-		{
-			cout << "\n\n No of Nodes are = 0";
-			return;
-		}
-
-		else if (head->info == NULL)
-		{
-			cout << "\n\n No of nodes are = 1";
-			return;
-		}
-
-		else
-		{
-			int count = 0;
-			list* temp = head;
-			while (temp != NULL)
-			{
-				count++;
-				temp = temp->list;
-			}
-
-			cout << "\n\n No of nodes are = " << count;
 		}
 	}
 

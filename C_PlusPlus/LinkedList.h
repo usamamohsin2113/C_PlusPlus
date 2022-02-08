@@ -273,7 +273,23 @@ namespace DataStructure
 
 		int CountNodes()
 		{
+			if (head == NULL)
+			{
+				cout << "List is empty";
+				return 0;
+			}
 
+			int count = 0;
+
+			Node* temp = head;
+
+			while (temp != NULL)
+			{
+				count++;
+				temp = temp->next;
+			}
+
+			return count;
 		}
 
 		void Show()
@@ -293,6 +309,7 @@ namespace DataStructure
 			}
 		}
 
+		// Method is pending
 		void ShowReverse()
 		{
 			if (head == NULL)
