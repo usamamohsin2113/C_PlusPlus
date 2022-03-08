@@ -145,7 +145,6 @@ namespace DataStructure
 			}
 		}
 
-		// Method is pending
 		void DeleteAtPosition(int position)
 		{
 			if (head == NULL)
@@ -163,18 +162,20 @@ namespace DataStructure
 				return;
 			}
 
-			Node* temp = head;
+			Node* pre = head;
+			Node* temp = pre->next;
+			position -= 1;
 
 			while (position-- && temp != NULL)
 			{
 				if (position == 0)
 				{
-					Node* node = temp;
-
-
+					pre->next = temp->next;
+					delete temp;
 					return;
 				}
 
+				pre = temp;
 				temp = temp->next;
 			}
 		}
