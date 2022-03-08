@@ -41,9 +41,6 @@
     <ClInclude Include="LinkList_Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LinkList_Operations.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DrawShapes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
